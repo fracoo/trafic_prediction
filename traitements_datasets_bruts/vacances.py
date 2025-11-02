@@ -8,7 +8,7 @@ import re
 from datetime import datetime
 import holidays
 
-df = pd.read_csv('trafic_prediction/dataset_brut/fr-en-calendrier-scolaire.csv', sep=";")
+df = pd.read_csv('trafic_prediction/0.dataset_raw/fr-en-calendrier-scolaire.csv', sep=";")
 
 df = df[(df['Académies'] == "Paris") & (df['annee_scolaire'].isin(['2023-2024','2024-2025','2025-2026']))].reset_index(drop=True)
 
@@ -25,7 +25,7 @@ for col in ['Date de début', 'Date de fin']:
 
     df[col] = df[col].apply(lambda x: x.replace(tzinfo=None) if pd.notnull(x) else x)
 
-
+df['Date de fin'] = df['Date de fin'] - pd.Timedelta(hours=1)
 def parse_school_year_label(label):
     m = re.search(r"(\d{4})[-_](\d{4})", str(label))
     if not m:
@@ -90,6 +90,6 @@ df_plus.columns = df_plus.columns.str.normalize('NFKD').str.encode('ascii', erro
 df_plus.drop(columns=['population','zones','annee_scolaire','academies'], inplace=True, errors='ignore')
 
 # ✅ SAUVEGARDER AVEC date_format POUR GARANTIR LE FORMAT
-df_plus.to_csv('trafic_prediction/dataset/vacances.csv', sep=';', index=False, date_format='%Y-%m-%d %H:%M:%S')
+df_plus.to_csv('trafic_prediction/1.dataset_trusted/vacances.csv', sep=';', index=False, date_format='%Y-%m-%d %H:%M:%S')
 
 print("\n✅ Fichier sauvegardé avec dates uniformisées!")
