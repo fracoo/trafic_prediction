@@ -1,0 +1,11 @@
+Colonne1;date;Colonne2;Colonne3;team;victory;def;dom;t
+Huitièmes;05-mars-25;Liverpool FC (domicile);Paris Saint-Germain 0-1 Liverpool  ;psg;n;n;y;ldc
+Huitièmes (retour);11-mars-25;Liverpool (extérieur);Liverpool 0-1 Paris Saint-Germain  ;psg;y;y;n;ldc
+Quarts;09-avr-25;Aston Villa (domicile);Paris Saint-Germain 3-1 Aston Villa  ;psg;y;n;y;ldc
+Quarts (retour);15-avr-25;Aston Villa (extérieur);Aston Villa 3-2 Paris Saint-Germain  ;psg;y;y;n;ldc
+Demi-finales;29-avr-25;Arsenal FC (extérieur);Arsenal 0-1 Paris Saint-Germain  ;psg;y;n;n;ldc
+Demi-finales (retour);07-mai-25;Arsenal (domicile);Paris Saint-Germain 2-1 Arsenal  ;psg;y;y;y;ldc
+Finale;31-mai-25;Inter Milan;Paris Saint-Germain 5-0 Inter Milan  ;psg;y;y;n;ldc
+Coupe de France;24-mai-25;;;psg;y;y;n;Coupe de France
+Trophée des Champions;05-janv-25;;;psg;y;y;n;Trophée des Champions
+Ligue1;05-avr-25;;;psg;y;y;y;Ligue1
