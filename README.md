@@ -77,5 +77,4 @@ flowchart TD
     E[datasets_externes_clean] --> F
     F[traitements_remplissage_df] --> G
     G[datasets_axes_with_all_features] --> H
-    H[modeles] --> I[predictions_finales.csv]
-    I[pred j+3] --> J
+    H[modeles] --> I[pred j+3]
