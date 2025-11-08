@@ -39,20 +39,7 @@ Contient **un script par axe**, chacun réalisant :
 - Chargement de son dataset enrichi  
 - Entraînement des modèles (débit horaire et taux d’occupation)  
 - Génération des prédictions pour les **9, 10 et 11 novembre**
-
-Les fichiers de prédiction `.csv` générés sont exportés dans le dossier suivant.
-
----
-
-## 📅 Compilation des prédictions finales
-
-📂 `pred j+3/`  
-Ce dossier contient :
-
-- Les **fichiers de prédiction** des trois axes  
-- Les **prévisions météorologiques** sur les 9–11 novembre  
-- La **fusion des prédictions dans un seul fichier final**  
-- ✅ **Fichier final livré :** `fichier_complet_pour_previsions.csv`
+- ✅ **Fichier final livré :** `predictions_finales.csv`
 
 **Colonnes :**
 
@@ -64,6 +51,18 @@ Ce dossier contient :
 | `taux_occupation` | Taux d’occupation prédit |
 
 ---
+
+---
+
+## 📅 Compilation des prédictions finales
+
+📂 `pred j+3/`  
+Ce dossier contient :
+  
+- Les **prévisions météorologiques** sur les 9–11 novembre 
+- Le dataframe regroupant les features nécessaires aux prédictions 
+- La **fusion des prédictions dans un seul fichier final**  
+
 
 ## 📌 Schéma global du pipeline
 
@@ -78,5 +77,5 @@ flowchart TD
     E[datasets_externes_clean] --> F
     F[traitements_remplissage_df] --> G
     G[datasets_axes_with_all_features] --> H
-    H[modeles] --> I
-    I[pred j+3] --> J[fichier_complet_pour_previsions.csv]
+    H[modeles] --> I[predictions_finales.csv]
+    I[pred j+3] --> J
